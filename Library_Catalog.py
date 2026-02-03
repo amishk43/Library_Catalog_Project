@@ -1,13 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import os
 from enum import Enum
-
-# ---------------- CORE LOGIC ---------------- #
 
 class Status(Enum):
     AVAILABLE = "AVAILABLE"
@@ -23,7 +15,6 @@ class Book:
 
     def __str__(self):
         return f"{self.id}: {self.title} by {self.author} [{self.status.value}]"
-
 
 class LibraryCatalog:
     def __init__(self):
@@ -61,8 +52,6 @@ class LibraryCatalog:
             raise ValueError("Book not found")
         return self.books[book_id]
 
-
-# ---------------- CLI FALLBACK ---------------- #
 
 def run_cli(library):
     while True:
@@ -108,8 +97,6 @@ def run_cli(library):
         except Exception as e:
             print("Error:", e)
 
-
-# ---------------- GUI ATTEMPT ---------------- #
 
 def run_gui(library):
     import tkinter as tk
@@ -171,8 +158,6 @@ def run_gui(library):
 
     root.mainloop()
 
-
-# ---------------- MAIN ---------------- #
 
 library = LibraryCatalog()
 library.add_book(Book(1, "1984", "George Orwell"))
