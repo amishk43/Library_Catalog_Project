@@ -35,6 +35,5 @@ In a production system, these tradeoffs would be addressed using persistent stor
 
 ## Use of AI Tools
 ChatGPT was used to:
-Assist with Tkinter syntax
-review logic for rule enforcement and overall code stability
+Assist with Tkinter syntax and review logic for rule enforcement and overall code stability
 
